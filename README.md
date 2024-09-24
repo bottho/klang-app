@@ -37,7 +37,7 @@ This application demonstrates the use of Next.js with the App Router, along with
 
 **Clone the repository:**
 
-> git clone https://github.com/yourusername/klang-app.git
+> git clone https://github.com/bottho/klang-app.git
 
 > cd klang-app
 
