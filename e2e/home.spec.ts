@@ -26,9 +26,6 @@ test("All links on the homepage work correctly", async ({ page, context }) => {
     // Check that the page loaded successfully
     expect(response?.ok()).toBeTruthy();
 
-    // Optionally, check that the page has a specific content or element
-    // await expect(newPage).toHaveSelector('body');
-
     // Close the new page
     await newPage.close();
   }
