@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import localFont from "next/font/local";
 import "./globals.css";
+import GradientBackground from "../components/GradientBackground";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -25,11 +27,32 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+  <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+    <GradientBackground />
+    <div className="flex items-center justify-center min-h-screen">
+      <div className="bg-black bg-opacity-50 p-8 rounded-lg w-fit">
         {children}
-      </body>
-    </html>
+      </div>
+    </div>
+    <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
+      <a
+        className="flex items-center gap-2 hover:underline hover:underline-offset-4"
+        href="https://github.com/bottho"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <Image
+          aria-hidden
+          src="https://nextjs.org/icons/globe.svg"
+          alt="Globe icon"
+          width={16}
+          height={16}
+        />
+        Go to my GitHub →
+      </a>
+    </footer>
+  </body>
+</html>
+
   );
 }
